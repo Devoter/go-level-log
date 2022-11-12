@@ -10,4 +10,5 @@ type Logger interface {
 	Unit() string
 	SetUnit(unit string)
 	Log(level int, useOutStream uint8, pairs ...interface{})
+	LogIf(condition bool, level int, useOutStream uint8, pairs ...interface{})
 }

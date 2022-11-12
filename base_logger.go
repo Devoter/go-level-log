@@ -48,6 +48,6 @@ func (l *BaseLogger) SetUnit(unit string) {
 }
 
 // Log outputs a log record.
-func (l *BaseLogger) Log(level int, useOutStream uint8, pairs ...interface{}) {
+func (l *BaseLogger) Log(level int, useOutStream uint8, pairs ...interface{}) {}
 
-}
+func (l *BaseLogger) LogIf(condition bool, level int, useOutStream uint8, pairs ...interface{}) {}

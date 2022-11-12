@@ -79,3 +79,9 @@ func (l *FmtLogger) Log(level int, useOutStream uint8, pairs ...interface{}) {
 		fmt.Fprint(os.Stderr, s)
 	}
 }
+
+func (l *FmtLogger) LogIf(condition bool, level int, useOutStream uint8, pairs ...interface{}) {
+	if condition {
+		l.Log(level, useOutStream, pairs...)
+	}
+}
